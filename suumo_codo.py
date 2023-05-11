@@ -12,8 +12,8 @@ st.write(df)
 #Streamlitのウィジェットを使用して、家賃、間取り、専有面積などの絞り込み条件を指定できるようにする。
 
 # 家賃の範囲を指定するスライダー
-min_age = st.slider('最低築年数', min_value=0, max_value=df['築年数'].max(), step=1)
-max_age = st.slider('最高築年数', min_value=0, max_value=df['築年数'].max(), step=1)
+min_age = st.slider('最低築年数', min_value=0, max_value=int(df['築年数'].max()), step=1)
+max_age = st.slider('最高築年数', min_value=0, max_value=int(df['築年数'].max()), step=1)
 
 # 間取りの選択肢
 room_types = ['DK', 'K', 'L', 'S']
